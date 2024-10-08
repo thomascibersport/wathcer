@@ -1,18 +1,14 @@
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, redirect
 import requests
-from django.shortcuts import render
-from .models import PreviewImage, Contact
-import random
+
 
 def handle_index(request: HttpRequest) -> HttpResponse:
-    hero_image = random.choice(PreviewImage.objects.all())
-    return render(request, 'home/home.html', {'hero_image': hero_image})
+    return render(request, 'home/home.html')
 
 
 def handle_contacts(request: HttpRequest) -> HttpResponse:
-    contacts = Contact.objects.all()
-    return render(request, 'contacts/index.html', {'contacts': contacts})
+    return render(request, 'contacts/index.html')
 
 FASTAPI_UPLOAD_URL = "http://127.0.0.1:8000/files/upload"
 
