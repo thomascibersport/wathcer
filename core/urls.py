@@ -7,5 +7,5 @@ urlpatterns = [
     path('contacts/', views.handle_contacts),
     path('about/', views.handle_about),
 
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls)
 ]
