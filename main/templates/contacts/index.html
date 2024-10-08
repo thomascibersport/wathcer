@@ -17,6 +17,13 @@
     </nav>
   </header>
 
-  <div class="content"></div>
+  <div class="content">
+    <h1>Contacts</h1>
+<ul>
+    {% for contact in contacts %}
+        <li>{{ contact.phone }} - {{ contact.email }}</li>
+    {% endfor %}
+</ul>
+  </div>
 </body>
 </html>
